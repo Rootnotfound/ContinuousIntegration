@@ -14,9 +14,11 @@ echo "Killing previous docker container"
 sudo docker kill $containerName
 sudo docker rm $containerName
 
+################OPTIONAL COMMAND################
 #if [ -f /var/run/docker.pid ]; then
 #sudo rm /var/run/docker.pid
 #fi
+################OPTIONAL COMMAND################
 
 echo "Starting new docker container"
 cd ..
