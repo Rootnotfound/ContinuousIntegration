@@ -32,17 +32,6 @@ fi
 cd /vagrant
 sudo chmod +rx run.sh
 
-#echo "Starting Docker deamon"
-#sudo nonhup docker -d &
-
-#echo "Pulling docker image down"
-#docker pull rootnotfound/helloworld
-
-#echo "Downloading the project"
-#cd /vagrant
-#sudo git clone $Git_directory
-
-
 #echo "Installing Java"
 #sudo yum install java-1.7.0 -y
 #sudo yum install java-1.7.0-openjdk -y
