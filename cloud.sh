@@ -21,6 +21,5 @@ sudo docker rm $containerName
 ################OPTIONAL COMMAND################
 
 echo "Starting new docker container"
-cd ..
-sudo docker build -t=$ImageName ninja_publish
+sudo docker build -t=$ImageName .
 sudo docker run -d --name $containerName -p=\"$hostIP:80\" $ImageName 
