@@ -22,6 +22,11 @@ oldappFolderName=ninja-sample
 #warPath=
 #appFolderPath=
 
+if [ -f .git ]; then
+			sudo rm .git
+fi
+
+
 if [ ! -d "app/run/$appFolderName" ]; then
 	if [ ! -d "~/$appFolderName" ]; then
 		if [ -f $appFolderName/.git ]; then
