@@ -28,5 +28,5 @@ fi
 cd ..
 
 echo "Starting new docker container"
-sudo docker build -t=$ImageName .
+sudo docker build --no-cache -t=$ImageName .
 sudo docker run -d --name $containerName -p=\"$hostIP:80\" $ImageName 
