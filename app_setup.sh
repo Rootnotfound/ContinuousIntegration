@@ -19,14 +19,16 @@ olddockerImageName="webapp"
 oldcontainerName="myapp"
 oldappFolderName=ninja-sample
 
-if [ -f .git ]; then
-	sudo rm .git
+if [ -d .git ]; then
+	sudo rm -r .git
+	echo "root .git deleted"
 fi
 
 if [ ! -d "app/run/$appFolderName" ]; then
 	if [ ! -d "~/$appFolderName" ]; then
-		if [ -f $appFolderName/.git ]; then
-			sudo rm $appFolderName/.git
+		if [ -d $appFolderName/.git ]; then
+			sudo rm -r $appFolderName/.git
+			echo "app .git deleted"
 		fi
 		mkdir app
 		mkdir app/run
