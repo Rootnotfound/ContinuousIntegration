@@ -20,6 +20,13 @@ sudo docker rm $containerName
 #fi
 ################OPTIONAL COMMAND################
 
+if [ ! -d "jdk" ]; then
+mkdir jdk
+cd jdk
+sudo wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u40-b26/jdk-8u40-linux-x64.rpm
+fi
+cd ..
+
 echo "Starting new docker container"
 sudo docker build -t=$ImageName .
 sudo docker run -d --name $containerName -p=\"$hostIP:80\" $ImageName 
